@@ -145,11 +145,20 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
           </button>
         </div>
 
-        <p className="text-center mt-5">
+        <div className="flex items-center justify-center gap-4 mt-5">
           <Link href="/create" className="text-xs text-gray-400 hover:underline">
             別の絵本を作り直す
           </Link>
-        </p>
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("AIで絵本を作りました！ #えほんのほし #AI絵本 https://ehon-no-hoshi.vercel.app")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs px-3 py-1.5 rounded-lg bg-black hover:bg-gray-800 text-white font-medium transition-colors"
+            aria-label="えほんのほしを使ったことをXにシェアする"
+          >
+            Xにシェア
+          </a>
+        </div>
       </div>
 
       {showModal && (
