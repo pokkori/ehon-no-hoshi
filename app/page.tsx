@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StreakBadge from "@/components/StreakBadge";
 
 const SAMPLE_PAGES = [
   { page: 1, text: "むかしむかし、ゆうきという男の子がいました。\nゆうきは恐竜が大すきで、毎日図かんを読んでいました。" },
@@ -13,13 +14,16 @@ export default function HomePage() {
       <header className="sticky top-0 z-40 border-b border-violet-100 bg-white/90 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
           <span className="text-lg font-bold text-violet-900">📖 えほんのほし</span>
-          <Link
-            href="/create"
-            className="bg-violet-500 hover:bg-violet-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors min-h-[44px] inline-flex items-center"
-            aria-label="オリジナル絵本作成フォームへ進む"
-          >
-            絵本を作る
-          </Link>
+          <div className="flex items-center gap-3">
+            <StreakBadge />
+            <Link
+              href="/create"
+              className="bg-violet-500 hover:bg-violet-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors min-h-[44px] inline-flex items-center"
+              aria-label="オリジナル絵本作成フォームへ進む"
+            >
+              絵本を作る
+            </Link>
+          </div>
         </div>
       </header>
 
