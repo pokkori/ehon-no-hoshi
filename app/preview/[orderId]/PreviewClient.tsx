@@ -61,7 +61,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
         </div>
 
         {/* 絵本ページ */}
-        <div className="bg-white rounded-2xl shadow-lg border border-violet-100 overflow-hidden mb-4">
+        <div className="backdrop-blur-md bg-white/95 rounded-2xl shadow-lg border border-violet-100 overflow-hidden mb-4">
           {/* イラスト */}
           <div className="relative w-full aspect-square bg-violet-50">
             {currentImg ? (
@@ -115,6 +115,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
               <button
                 key={p}
                 onClick={() => goPage(p)}
+                aria-label={p === 0 ? "表紙を見る" : `${p}ページ目を見る`}
                 className={`w-6 h-6 rounded-full text-xs font-bold transition-colors ${
                   currentPage === p
                     ? "bg-violet-500 text-white"

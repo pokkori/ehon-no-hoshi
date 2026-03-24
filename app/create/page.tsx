@@ -117,7 +117,7 @@ export default function CreatePage() {
         ))}
       </div>
 
-      <div className="w-full max-w-md bg-white rounded-2xl border border-violet-100 shadow-sm p-8">
+      <div className="w-full max-w-md backdrop-blur-md bg-white/90 border border-violet-100 shadow-sm rounded-2xl p-8">
         {/* Step 1: 子供の基本情報 */}
         {step === 1 && (
           <div>
