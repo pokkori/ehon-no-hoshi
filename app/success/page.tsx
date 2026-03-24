@@ -4,7 +4,7 @@ export default function SuccessPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-16 text-center" style={{ background: "#fdf8ff" }}>
       <div className="max-w-md w-full">
-        <div className="text-6xl mb-6">📖</div>
+        <div className="text-6xl mb-6"></div>
         <h1 className="text-2xl font-black text-violet-950 mb-4">
           ご注文ありがとうございます！
         </h1>

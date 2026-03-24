@@ -4,16 +4,16 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const THEMES = [
-  { key: "恐竜の冒険", icon: "🦕" },
-  { key: "宇宙への旅", icon: "🚀" },
-  { key: "海の探検", icon: "🌊" },
-  { key: "魔法の森", icon: "🌿" },
-  { key: "動物の王国", icon: "🦁" },
-  { key: "お菓子の国", icon: "🍰" },
-  { key: "ひみつのたからさがし", icon: "🗺️" },
-  { key: "くものうえの楽園", icon: "☁️" },
-  { key: "ロボットとなかよし", icon: "🤖" },
-  { key: "おまかせ（AIに任せる）", icon: "✨" },
+  { key: "恐竜の冒険", icon: "" },
+  { key: "宇宙への旅", icon: "" },
+  { key: "海の探検", icon: "" },
+  { key: "魔法の森", icon: "" },
+  { key: "動物の王国", icon: "" },
+  { key: "お菓子の国", icon: "" },
+  { key: "ひみつのたからさがし", icon: "️" },
+  { key: "くものうえの楽園", icon: "️" },
+  { key: "ロボットとなかよし", icon: "" },
+  { key: "おまかせ（AIに任せる）", icon: "" },
 ];
 
 const LIKES_SUGGESTIONS = [
@@ -97,7 +97,7 @@ export default function CreatePage() {
   return (
     <main className="min-h-screen flex flex-col items-center px-4 py-12" style={{ background: "#fdf8ff" }}>
       <div className="mb-8 text-center">
-        <span className="text-2xl font-black text-violet-900">📖 えほんのほし</span>
+        <span className="text-2xl font-black text-violet-900"> えほんのほし</span>
         <p className="text-sm text-gray-500 mt-1">絵本作成フォーム</p>
       </div>
 
@@ -112,7 +112,7 @@ export default function CreatePage() {
               "bg-violet-100 text-violet-400"
             }`}
           >
-            {Number(step) > i + 1 ? "✓" : s}
+            {Number(step) > i + 1 ? "" : s}
           </div>
         ))}
       </div>
@@ -153,8 +153,8 @@ export default function CreatePage() {
                 <label className="text-xs font-bold text-violet-700 mb-2 block">性別</label>
                 <div className="flex gap-3">
                   {[
-                    { key: "boy", label: "男の子 👦" },
-                    { key: "girl", label: "女の子 👧" },
+                    { key: "boy", label: "男の子 " },
+                    { key: "girl", label: "女の子 " },
                     { key: "other", label: "どちらでも" },
                   ].map((g) => (
                     <button
@@ -335,7 +335,7 @@ export default function CreatePage() {
               <span className="animate-spin inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full" />
               AIが絵本を生成中...（1〜2分かかります）
             </span>
-          ) : step < 3 ? "次へ →" : "絵本のプレビューを作る ✨"}
+          ) : step < 3 ? "次へ →" : "絵本のプレビューを作る "}
         </button>
 
         {step === 3 && !loading && (

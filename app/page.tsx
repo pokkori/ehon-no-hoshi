@@ -13,7 +13,7 @@ export default function HomePage() {
       {/* ヘッダー */}
       <header className="sticky top-0 z-40 border-b border-violet-100 bg-white/90 backdrop-blur">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
-          <span className="text-lg font-bold text-violet-900">📖 えほんのほし</span>
+          <span className="text-lg font-bold text-violet-900"> えほんのほし</span>
           <div className="flex items-center gap-3">
             <StreakBadge />
             <Link
@@ -51,7 +51,7 @@ export default function HomePage() {
 
       {/* サンプル絵本 */}
       <section className="max-w-xl mx-auto px-4 mb-16">
-        <div className="bg-white rounded-2xl shadow-md border border-violet-100 p-6 relative">
+        <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '16px' }} className="shadow-md p-6 relative">
           <div className="absolute -top-3 left-6 bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full">
             サンプル（ゆうきくんの恐竜の冒険）
           </div>
@@ -76,12 +76,12 @@ export default function HomePage() {
           <h2 className="text-xl font-black text-violet-950 mb-6">こんな時に</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { icon: "🎂", text: "誕生日\nプレゼント" },
-              { icon: "🌸", text: "入園・入学\nのお祝い" },
-              { icon: "🎓", text: "卒園・卒業\nの記念に" },
-              { icon: "🎅", text: "クリスマス\nプレゼント" },
+              { icon: "", text: "誕生日\nプレゼント" },
+              { icon: "", text: "入園・入学\nのお祝い" },
+              { icon: "", text: "卒園・卒業\nの記念に" },
+              { icon: "", text: "クリスマス\nプレゼント" },
             ].map((item) => (
-              <div key={item.text} className="bg-white rounded-xl p-4 shadow-sm">
+              <div key={item.text} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="p-4 shadow-sm">
                 <div className="text-3xl mb-2">{item.icon}</div>
                 <p className="text-sm text-gray-700 font-medium whitespace-pre-line">{item.text}</p>
               </div>
@@ -99,7 +99,7 @@ export default function HomePage() {
             { step: "2", title: "AIが絵本を生成", desc: "AIが12ページのオリジナルストーリーと表紙イラストを自動生成。プレビューで内容を確認できます。" },
             { step: "3", title: "気に入ったら注文", desc: "¥3,480を支払うと、ご自宅に絵本が届きます。7〜10営業日でお届け。" },
           ].map((item) => (
-            <div key={item.step} className="flex items-start gap-4 bg-white rounded-xl p-5 border border-violet-100 shadow-sm">
+            <div key={item.step} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="flex items-start gap-4 p-5 shadow-sm">
               <div className="w-10 h-10 bg-violet-500 text-white rounded-full flex items-center justify-center font-black text-lg shrink-0">
                 {item.step}
               </div>
@@ -115,16 +115,16 @@ export default function HomePage() {
       {/* 料金 */}
       <section className="max-w-md mx-auto px-4 mb-16">
         <h2 className="text-xl font-black text-violet-950 text-center mb-6">料金</h2>
-        <div className="bg-white rounded-2xl border-2 border-violet-200 p-8 shadow-sm text-center">
+        <div style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '2px solid rgba(139,92,246,0.4)', borderRadius: '16px' }} className="shadow-sm p-8 text-center">
           <p className="text-sm font-bold text-violet-500 mb-2">オリジナル絵本 1冊</p>
           <p className="text-5xl font-black text-violet-950 mb-1">¥4,980</p>
           <p className="text-sm text-gray-400 mb-6">税込・送料込み</p>
           <ul className="space-y-2 text-sm text-gray-700 text-left mb-8">
-            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0">✓</span>12ページオリジナルストーリー</li>
-            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0">✓</span>全12ページにAI生成イラスト</li>
-            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0">✓</span>A5サイズ・製本絵本</li>
-            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0">✓</span>ご自宅へ郵送</li>
-            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0">✓</span>プレビュー確認後に注文</li>
+            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0"></span>12ページオリジナルストーリー</li>
+            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0"></span>全12ページにAI生成イラスト</li>
+            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0"></span>A5サイズ・製本絵本</li>
+            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0"></span>ご自宅へ郵送</li>
+            <li className="flex items-start gap-2"><span className="text-violet-500 shrink-0"></span>プレビュー確認後に注文</li>
           </ul>
           <Link
             href="/create"
@@ -147,10 +147,10 @@ export default function HomePage() {
             { q: "いつ届きますか？", a: "ご注文から7〜10営業日を目安にお届けします。発送時にメールでお知らせします。" },
             { q: "返品・キャンセルはできますか？", a: "オーダーメイド品のため、原則として返品・キャンセルはお受けできません。プレビューで内容をご確認の上ご注文ください。" },
           ].map((item) => (
-            <details key={item.q} className="bg-white rounded-xl border border-violet-100 p-5 group cursor-pointer">
+            <details key={item.q} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="p-5 group cursor-pointer">
               <summary className="font-bold text-sm text-violet-950 list-none flex justify-between items-center">
                 {item.q}
-                <span className="text-violet-400 group-open:rotate-180 transition-transform">▼</span>
+                <span className="text-violet-400 group-open:rotate-180 transition-transform"></span>
               </summary>
               <p className="mt-3 text-sm text-gray-600 leading-relaxed">{item.a}</p>
             </details>

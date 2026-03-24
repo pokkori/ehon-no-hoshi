@@ -25,7 +25,7 @@ export default async function AdminPage() {
     <main className="min-h-screen" style={{ background: "#fdf8ff" }}>
       <header className="border-b border-violet-100 bg-white">
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-violet-900">📖 えほんのほし 管理画面</Link>
+          <Link href="/" className="text-lg font-bold text-violet-900"> えほんのほし 管理画面</Link>
         </div>
       </header>
 

@@ -25,7 +25,7 @@ export default async function PreviewPage({ params }: { params: Promise<{ orderI
     return (
       <main className="min-h-screen flex items-center justify-center" style={{ background: "#fdf8ff" }}>
         <div className="text-center p-8">
-          <div className="text-5xl mb-4">📖</div>
+          <div className="text-5xl mb-4"></div>
           <p className="text-xl font-black text-violet-950 mb-2">この絵本はご注文済みです</p>
           <p className="text-gray-500">ご注文ありがとうございました</p>
         </div>

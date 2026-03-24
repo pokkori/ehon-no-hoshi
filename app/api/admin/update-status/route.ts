@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
           to: order.email,
           subject: `【えほんのほし】${order.child_name}の絵本を発送しました`,
           html: `
-            <h2>絵本を発送しました 📖</h2>
+            <h2>絵本を発送しました </h2>
             <p>「${order.title ?? `${order.child_name}の物語`}」を発送しました。</p>
             <p>到着まで今しばらくお待ちください。</p>
             <br>

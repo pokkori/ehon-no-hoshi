@@ -105,7 +105,7 @@ export default function PayjpModal({ publicKey, onSuccess, onClose, orderId }: P
           {loading ? "処理中..." : "¥4,980 を支払って注文する"}
         </button>
         <p className="text-xs text-gray-400 mt-4 text-center">
-          🔒 カード情報はPAY.JP（PCI DSS準拠）で安全に処理されます。
+           カード情報はPAY.JP（PCI DSS準拠）で安全に処理されます。
         </p>
       </div>
     </div>

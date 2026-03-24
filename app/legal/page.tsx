@@ -5,7 +5,7 @@ export default function LegalPage() {
     <main className="min-h-screen" style={{ background: "#fdf8ff" }}>
       <header className="border-b border-violet-100 bg-white">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center">
-          <Link href="/" className="text-lg font-bold text-violet-900">📖 えほんのほし</Link>
+          <Link href="/" className="text-lg font-bold text-violet-900"> えほんのほし</Link>
         </div>
       </header>
       <div className="max-w-2xl mx-auto px-4 py-10">

@@ -42,7 +42,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
     <main className="min-h-screen" style={{ background: "#fdf8ff" }}>
       <header className="sticky top-0 z-40 border-b border-violet-100 bg-white/90 backdrop-blur">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold text-violet-900">📖 えほんのほし</Link>
+          <Link href="/" className="text-lg font-bold text-violet-900"> えほんのほし</Link>
           <button
             onClick={() => setShowModal(true)}
             className="bg-violet-500 hover:bg-violet-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors"
@@ -73,7 +73,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
             ) : (
               <div className="w-full h-full flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-5xl mb-3">📖</div>
+                  <div className="text-5xl mb-3"></div>
                   <p className="text-sm text-violet-400">イラストを読み込み中...</p>
                 </div>
               </div>
