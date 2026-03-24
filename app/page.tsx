@@ -82,7 +82,7 @@ export default function HomePage() {
               { icon: "", text: "クリスマス\nプレゼント" },
             ].map((item) => (
               <div key={item.text} style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: '12px' }} className="p-4 shadow-sm">
-                <div className="text-3xl mb-2">{item.icon}</div>
+                <div className="text-3xl mb-2" aria-hidden="true">{item.icon}</div>
                 <p className="text-sm text-gray-700 font-medium whitespace-pre-line">{item.text}</p>
               </div>
             ))}
