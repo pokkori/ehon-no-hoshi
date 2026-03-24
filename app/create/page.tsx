@@ -160,6 +160,8 @@ export default function CreatePage() {
                     <button
                       key={g.key}
                       onClick={() => setForm({ ...form, childGender: g.key as typeof form.childGender })}
+                      aria-label={`性別を${g.label}に設定する`}
+                      aria-pressed={form.childGender === g.key}
                       className={`flex-1 py-2 rounded-xl text-sm font-bold border-2 transition-colors ${
                         form.childGender === g.key
                           ? "bg-violet-500 border-violet-500 text-white"
@@ -187,6 +189,8 @@ export default function CreatePage() {
                 <button
                   key={item}
                   onClick={() => toggleLike(item)}
+                  aria-label={`${item}を${form.likes.includes(item) ? "選択解除" : "選択"}する`}
+                  aria-pressed={form.likes.includes(item)}
                   className={`px-3 py-1.5 rounded-full text-xs font-bold border-2 transition-colors ${
                     form.likes.includes(item)
                       ? "bg-violet-500 border-violet-500 text-white"
@@ -223,7 +227,7 @@ export default function CreatePage() {
                 {form.likes.map((l) => (
                   <span key={l} className="bg-violet-100 text-violet-700 text-xs font-bold px-2 py-1 rounded-full flex items-center gap-1">
                     {l}
-                    <button onClick={() => setForm((prev) => ({ ...prev, likes: prev.likes.filter((x) => x !== l) }))} className="text-violet-400 hover:text-violet-600 ml-1">×</button>
+                    <button onClick={() => setForm((prev) => ({ ...prev, likes: prev.likes.filter((x) => x !== l) }))} aria-label={`${l}を削除する`} className="text-violet-400 hover:text-violet-600 ml-1">×</button>
                   </span>
                 ))}
               </div>
@@ -235,6 +239,8 @@ export default function CreatePage() {
                 <button
                   key={t.key}
                   onClick={() => setForm({ ...form, theme: t.key })}
+                  aria-label={`テーマを${t.key}に設定する`}
+                  aria-pressed={form.theme === t.key}
                   className={`border-2 rounded-xl px-3 py-3 text-left transition-colors ${
                     form.theme === t.key
                       ? "border-violet-500 bg-violet-50"
@@ -328,7 +334,7 @@ export default function CreatePage() {
           }}
           disabled={!canNext() || loading}
           className="w-full mt-8 bg-violet-500 hover:bg-violet-600 text-white font-black py-4 rounded-2xl shadow-md disabled:opacity-40 disabled:cursor-not-allowed transition-all hover:-translate-y-0.5 disabled:hover:translate-y-0 min-h-[44px]"
-          aria-label={step < 3 ? `次のステップ（ステップ${step + 1}）へ進む` : "絵本のプレビューを生成する"}
+          aria-label={step === 1 ? "ページを追加する" : step === 2 ? "エピソードを次に進む" : "絵本を注文する"}
         >
           {loading ? (
             <span className="flex items-center justify-center gap-2">

@@ -89,7 +89,7 @@ export default async function AdminPage() {
                           <input type="hidden" name="orderId" value={o.id} />
                           <input type="hidden" name="status" value="printing" />
                           <input type="hidden" name="secret" value={process.env.CRON_SECRET} />
-                          <button type="submit" className="text-blue-600 hover:underline text-xs">製本中に</button>
+                          <button type="submit" aria-label="ステータスを製本中にする" className="text-blue-600 hover:underline text-xs">製本中に</button>
                         </form>
                       )}
                       {o.status === "printing" && (
@@ -97,7 +97,7 @@ export default async function AdminPage() {
                           <input type="hidden" name="orderId" value={o.id} />
                           <input type="hidden" name="status" value="shipped" />
                           <input type="hidden" name="secret" value={process.env.CRON_SECRET} />
-                          <button type="submit" className="text-green-600 hover:underline text-xs">発送済みに</button>
+                          <button type="submit" aria-label="ステータスを発送済みにする" className="text-green-600 hover:underline text-xs">発送済みに</button>
                         </form>
                       )}
                     </td>

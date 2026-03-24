@@ -45,6 +45,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
           <Link href="/" className="text-lg font-bold text-violet-900"> えほんのほし</Link>
           <button
             onClick={() => setShowModal(true)}
+            aria-label="絵本を注文する"
             className="bg-violet-500 hover:bg-violet-600 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors"
           >
             注文する ¥4,980
@@ -104,6 +105,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
           <button
             onClick={() => goPage(currentPage - 1)}
             disabled={currentPage === 0}
+            aria-label="前のページを見る"
             className="px-5 py-2.5 rounded-xl border-2 border-violet-200 text-violet-700 font-bold text-sm disabled:opacity-30 hover:border-violet-400 transition-colors"
           >
             ← 前
@@ -126,6 +128,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
           <button
             onClick={() => goPage(currentPage + 1)}
             disabled={currentPage === totalPages}
+            aria-label="次のページを見る"
             className="px-5 py-2.5 rounded-xl border-2 border-violet-200 text-violet-700 font-bold text-sm disabled:opacity-30 hover:border-violet-400 transition-colors"
           >
             次 →
@@ -139,6 +142,7 @@ export default function PreviewClient({ orderId, title, pages, coverUrl, childNa
           <p className="text-violet-200 text-xs mb-5">7〜10営業日でお届け</p>
           <button
             onClick={() => setShowModal(true)}
+            aria-label="絵本を注文する（¥4,980）"
             className="w-full bg-white hover:bg-violet-50 text-violet-600 font-black text-lg py-4 rounded-2xl shadow-md transition-all hover:-translate-y-0.5"
           >
             ¥4,980 で注文する →
