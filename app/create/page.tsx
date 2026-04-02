@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { haptics } from "@/utils/haptics";
 import { useRouter } from "next/navigation";
 
 const THEMES = [
@@ -73,6 +74,7 @@ export default function CreatePage() {
   };
 
   const handleGenerate = async () => {
+    haptics.tap();
     setLoading(true);
     setError("");
     try {
@@ -83,9 +85,11 @@ export default function CreatePage() {
       });
       const data = await res.json();
       if (!res.ok || !data.orderId) {
+        haptics.error();
         setError(data.error ?? "生成に失敗しました。もう一度お試しください。");
         return;
       }
+      haptics.success();
       router.push(`/preview/${data.orderId}`);
     } catch {
       setError("エラーが発生しました。もう一度お試しください。");
