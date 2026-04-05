@@ -1,12 +1,27 @@
 # えほんのほし
-お子さんの名前・好き・テーマを入力するだけでAIが世界にひとつだけのオリジナル絵本を作り自宅に郵送するサービス
+> AIが子ども向けのオリジナル絵本を生成するサービス
 
 ## サービス概要
-- 対象ユーザー: 子どもへの特別なプレゼントを探している親・祖父母・誕生日や入園・卒業のギフトを考えている方
-- 主な機能: 子どもの名前・好きなもの・テーマを入力するだけでオリジナル絵本をAI生成、実際に自宅へ郵送
-- 料金: 有料（詳細はサービスページにて）
-- URL: https://ehon-no-hoshi.vercel.app
+- **カテゴリ**: 教育AI
+- **URL**: https://ehon-no-hoshi.vercel.app
+- **提供形態**: Webブラウザで利用可能（登録不要で試せます）
+- **開発**: Claude Code + Next.js 16 + Vercel
 
-## 主要FAQ
-Q: えほんのほしでどんな絵本を作れますか？
-A: お子さんの名前・好きなキャラクター・テーマ（冒険・動物・宇宙など）を入力するだけで、AIが世界にひとつだけのオリジナルストーリーの絵本を生成し、ご自宅に郵送します。誕生日・入園・卒業・クリスマスなど特別な日のプレゼントに最適です。
+## 主要ページ
+- [トップページ](https://ehon-no-hoshi.vercel.app/): メイン機能・サービス説明
+- [ツール](https://ehon-no-hoshi.vercel.app/tool): AI機能の利用画面（一部サービス）
+- [プライバシーポリシー](https://ehon-no-hoshi.vercel.app/privacy): 個人情報の取り扱い
+- [特定商取引法に基づく表記](https://ehon-no-hoshi.vercel.app/legal): 法的情報
+
+## 利用シーン
+AIが子ども向けのオリジナル絵本を生成するサービス
+
+## 技術スタック
+- フロントエンド: Next.js 16, React 19, TypeScript, Tailwind CSS
+- AI: Claude claude-sonnet-4-6 (Anthropic)
+- バックエンド: Vercel Edge Functions, Supabase
+- 決済: KOMOJU（クレジットカード・コンビニ払い対応）
+
+## robots.txt
+AIクローラーによるインデックスを歓迎します。
+GPTBot, ClaudeBot, PerplexityBot, Googlebot-Extended のアクセスを許可しています。
